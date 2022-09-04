@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class paddle : MonoBehaviour
+public class Paddle : MonoBehaviour
 {
     protected Rigidbody2D _rigidbody;
 
