@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 188158413}
   - component: {fileID: 188158412}
   - component: {fileID: 188158411}
+  - component: {fileID: 188158414}
   m_Layer: 0
   m_Name: paddle
   m_TagString: Untagged
@@ -408,6 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0f24df1c21f584ea08dcde77a46249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 15
 --- !u!61 &188158412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -447,7 +449,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.5
-  m_LinearDrag: 2
+  m_LinearDrag: 5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -455,6 +457,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &188158414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188158408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64717383aa4993047b8b61c8d5df4f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncStrength: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551147378}
   - component: {fileID: 1551147377}
+  - component: {fileID: 1551147379}
   m_Layer: 0
   m_Name: wallBottom
   m_TagString: Untagged
@@ -652,6 +668,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1551147379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551147376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64717383aa4993047b8b61c8d5df4f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncStrength: 5
 --- !u!1 &1842111629
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +692,7 @@ GameObject:
   - component: {fileID: 1842111633}
   - component: {fileID: 1842111632}
   - component: {fileID: 1842111631}
+  - component: {fileID: 1842111634}
   - component: {fileID: 1842111630}
   m_Layer: 0
   m_Name: Ball
@@ -703,7 +733,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 25aaa3f20c5b5a643a919d345978f7f7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -774,6 +804,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1842111634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842111629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85786c4b47f2324688251f15e8218d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 250
 --- !u!1 &1918180046
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918180048}
   - component: {fileID: 1918180047}
+  - component: {fileID: 1918180049}
   m_Layer: 0
   m_Name: wallTop
   m_TagString: Untagged
@@ -831,6 +875,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918180049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918180046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64717383aa4993047b8b61c8d5df4f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncStrength: 5
 --- !u!1 &2039401571
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +900,8 @@ GameObject:
   - component: {fileID: 2039401574}
   - component: {fileID: 2039401573}
   - component: {fileID: 2039401572}
+  - component: {fileID: 2039401576}
+  - component: {fileID: 2039401577}
   m_Layer: 0
   m_Name: computerPaddle
   m_TagString: Untagged
@@ -891,7 +950,7 @@ Rigidbody2D:
   m_Mass: 0.5
   m_LinearDrag: 2
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -963,3 +1022,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039401576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039401571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288bd66688172da4c9bf4b392ac484fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  ball: {fileID: 1842111631}
+--- !u!114 &2039401577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039401571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64717383aa4993047b8b61c8d5df4f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncStrength: 10
