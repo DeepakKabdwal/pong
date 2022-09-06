@@ -1,7 +1,6 @@
-
 using UnityEngine;
 
-public class playerPaddle : MonoBehaviour
+public class playerPaddle : Paddle
 {
     private Vector2 _direction;
 
@@ -25,7 +24,7 @@ public class playerPaddle : MonoBehaviour
     {
         if(_direction.sqrMagnitude != 0)
         {
-            
+            _rigidbody.AddForce(_direction * this.speed);
         }
     }
 }
