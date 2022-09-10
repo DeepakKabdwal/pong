@@ -11,16 +11,17 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         ResetPosition();
+        AddStartingForce();
     }
     public void ResetPosition()
     {
         _rigidbody.position = Vector2.zero;
         _rigidbody.velocity = Vector2.zero;
         
-        AddStartingForce();
+       
     }
 
-    private void AddStartingForce()
+    public void AddStartingForce()
     {
         //add force to x direction with random function
         //it gets a value b/w 0 and 1 
