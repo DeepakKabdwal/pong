@@ -6,4 +6,4 @@ unity version 2021 preferred but you can go with the latest.
 Visual studio or VS Code for writing the code both work fine with unity.
 
 
-[![@dezcvr's Holopin board](https://holopin.me/dezcvr)](https://holopin.io/@dezcvr)
+
